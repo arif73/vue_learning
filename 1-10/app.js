@@ -4,7 +4,9 @@ var app=Vue.createApp({
           msg:"Welcome to vue js 3",
           count:0,
           num:"",
-          result:""
+          result:"",
+          skills:['html','css','javascript'],
+          newSkill:""
       };
     },
     methods:{
@@ -26,6 +28,13 @@ var app=Vue.createApp({
         reset(){
             this.num="";
             this.result="";
+        },
+        addSkill(){
+           this.skills.push(this.newSkill);
+           this.newSkill="";
+        },
+        removeSkill(i){
+            this.skills.splice(i, 1);
         }
     }
 });
