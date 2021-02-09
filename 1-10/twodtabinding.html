@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js 3</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="global.js"></script>
+</head>
+<body>
+	<header>
+		<h2>Vue js 3 bangla tutorial</h2>
+	</header>
+	<div id="app">
+        <h3>Enter your number</h3>
+        <input :value="num" type="text" @input="handleInput">
+        <hr>
+        <br>
+        <button @click="double">Double</button>
+        <button @click="square">Square</button>
+        <button @click="reset">Reset</button>
+        <br>
+        <label>Entered Number:</label>{{num}}
+        <br>
+        <label>Result:</label>{{result}}
+	</div>
+
+	<script src="app.js"></script>
+    
+</body>
+</html>
