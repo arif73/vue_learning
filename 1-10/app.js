@@ -9,7 +9,8 @@ var app=Vue.createApp({
                   {name:"css", experience: 7},
                   {name:"js", experience:3}
                 ],
-          newSkill:{name:"", experience:0}
+          newSkill:{name:"", experience:0},
+          show: false
       };
     },
     methods:{
@@ -38,6 +39,9 @@ var app=Vue.createApp({
         },
         removeSkill(i){
             this.skills.splice(i, 1);
+        },
+        toggle(){
+           this.show = !this.show;
         }
     }
 });
