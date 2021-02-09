@@ -11,7 +11,7 @@
 	</header>
 	<div id="app">
         <h3>Enter your number</h3>
-        <input :value="num" type="text" @input="handleInput">
+        <input v-model="num" type="text" >
         <hr>
         <br>
         <button @click="double">Double</button>
