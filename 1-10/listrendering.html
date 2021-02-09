@@ -10,10 +10,10 @@
 		<h2>Vue js 3 bangla tutorial</h2>
 	</header>
 	<div id="app">
-        <input type="text" v-model="newSkill"> <button @click="addSkill">add</button>
+        <input type="text" v-model="newSkill.name"> <button @click="addSkill">add</button>
         
         <ul>
-            <li v-for="(skill, i) in skills" @click="removeSkill(i)">{{skill}}</li>
+            <li v-for="(skill, i) in skills" @click="removeSkill(i)">{{skill.name}}({{skill.experience}})</li>
         </ul>
 	</div>
 

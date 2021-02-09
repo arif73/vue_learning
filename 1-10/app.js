@@ -5,8 +5,11 @@ var app=Vue.createApp({
           count:0,
           num:"",
           result:"",
-          skills:['html','css','javascript'],
-          newSkill:""
+          skills:[{name:"html", experience:5},
+                  {name:"css", experience: 7},
+                  {name:"js", experience:3}
+                ],
+          newSkill:{}
       };
     },
     methods:{
@@ -30,8 +33,8 @@ var app=Vue.createApp({
             this.result="";
         },
         addSkill(){
-           this.skills.push(this.newSkill);
-           this.newSkill="";
+           this.skills.push({ name: this.newSkill, experience:0});
+           this.newSkill={};
         },
         removeSkill(i){
             this.skills.splice(i, 1);
